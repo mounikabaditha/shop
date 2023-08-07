@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="viewreport" content="width=device-width,initial-scale=1.0">
+    <title>Ecommerce website</title>
+    <style>
+        /* ... Your existing CSS styles ... */
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background: black;
+}
+.heading ul {
+  display: flex;
+}
+.logo a {
+  color: white;
+  transition-duration: 1s;
+  font-weight: 800;
+}
+.logo a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+.heading ul li {
+  list-style: none;
+}
+.heading ul li a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  margin: 2px 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+.heading ul li a:active {
+  color: red;
+}
+.heading ul li a:hover {
+  color: rgb(243, 168, 7);
+  transition-duration: 1s;
+}
+
+.heading ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(243, 168, 7);
+}
+#input {
+  height: 30px;
+  width: 300px;
+  text-decoration: none;
+  border: 0px;
+  padding: 5px;
+}
+.logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: none;
+}
+ion-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+}
+ion-icon:hover {
+  cursor: pointer;
+}
+.search a {
+  display: flex;
+}
+header a ion-icon {
+  position: relative;
+  right: 3px;
+}
+
+.img-slider img {
+  height: 720px;
+  width: 1080px;
+}
+@keyframes slide {
+  0% {
+    left: 0px;
+  }
+  15% {
+    left: 0px;
+  }
+  20% {
+    left: -1080px;
+  }
+  32% {
+    left: -1080px;
+  }
+  35% {
+    left: -2160px;
+  }
+  47% {
+    left: -2160px;
+  }
+  50% {
+    left: -3240px;
+  }
+  63% {
+    left: -3240px;
+  }
+  66% {
+    left: -4320px;
+  }
+  79% {
+    left: -4320px;
+  }
+  82% {
+    left: -5400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.img-slider {
+  display: flex;
+  float: left;
+  position: relative;
+  width: 1080px;
+  height: 720px;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transition-duration: 2s;
+}
+
+.heading1 {
+  opacity: 0;
+}
+.search {
+  display: flex;
+  position: relative;
+}
+.section1 {
+  width: 1080px;
+  overflow: hidden;
+
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.section2 .container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+}
+.section2 .container .items {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 12px;
+}
+.section2 .container .items .name {
+  text-align: center;
+  background-color: rgb(240, 197, 6);
+  height: 25px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+}
+.section2 .container .items .price {
+  float: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-weight: 650;
+}
+.section2 .container .items .info {
+  padding-left: 10px;
+  color: rgb(243, 168, 7);
+}
+.section2 .container .items .img img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+.section2 .container .items .img {
+  overflow: hidden;
+  margin: 0;
+}
+.section2 .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  color: white;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.social-media a {
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+}
+.social-media a ion-icon {
+  color: white;
+  background-color: black;
+}
+.social-media a:hover ion-icon {
+  color: red;
+  transform: translateY(5px);
+}
+.footer2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+.footer0 {
+  font-weight: 1200;
+  transition-duration: 1s;
+}
+.footer0:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .heading {
+  font-weight: 900;
+  font-size: 18px;
+}
+.footer3 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer2 .heading:hover {
+  color: rgb(243, 168, 7);
+}
+.footer2 .div:hover {
+  transform: scale(1.05);
+}
+.footer3 h4 {
+  margin: 0 10px;
+}
+.footer2 div {
+  margin: 10px;
+}
+.menu {
+  visibility: hidden;
+}
+.heading1 .ham:active {
+  color: red;
+}
+.items {
+  overflow: hidden;
+}
+.ham,
+.close {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .heading ul li {
+    display: none;
+  }
+
+  .items {
+    transform: scale(0.9);
+  }
+  .img-slider img {
+    height: 60vw;
+    width: 80vw;
+  }
+  .ham:active {
+    color: red;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu a ion-icon {
+    position: absolute;
+  }
+
+  @keyframes slide1 {
+    0% {
+      left: 0vw;
+    }
+    15% {
+      left: 0vw;
+    }
+    20% {
+      left: -80vw;
+    }
+    32% {
+      left: -80vw;
+    }
+    35% {
+      left: -160vw;
+    }
+    47% {
+      left: -160vw;
+    }
+    50% {
+      left: -240vw;
+    }
+    63% {
+      left: -240vw;
+    }
+    66% {
+      left: -320vw;
+    }
+    79% {
+      left: -320vw;
+    }
+    82% {
+      left: -400vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .close {
+    z-index: 34;
+
+    color: white;
+    background-color: black;
+  }
+  .close:active {
+    color: red;
+  }
+  .menu ul li {
+    list-style: none;
+    margin: 20px;
+    border-top: 3px solid white;
+    width: 80%;
+    text-align: center;
+
+    padding-top: 10px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    padding-top: 10px;
+    color: white;
+    font-weight: 900;
+  }
+  .menu ul li a:hover {
+    color: rgb(240, 197, 6);
+  }
+  .img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 80%;
+    height: 60%;
+    animation-name: slide1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+  }
+  .section1 {
+    width: 80%;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+
+  .heading1 {
+    opacity: 1;
+    position: relative;
+    bottom: 8px;
+  }
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .heading1 .ham {
+    background-color: black;
+    color: white;
+  }
+  #input {
+    width: 200px;
+    flex-shrink: 2;
+  }
+  header {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .heading ul li {
+    display: none;
+  }
+  .heading1 {
+    opacity: 1;
+
+    bottom: 8px;
+  }
+
+  header {
+    height: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  #input {
+    width: 150px;
+  }
+  .close {
+    z-index: 34;
+  }
+
+  .search a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+
+        /* Add additional CSS styles for category section */
+        .category {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(240, 197, 6);
+
+            .button {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px 20px;
+      background-color: #555;
+      color: #fff;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    /* Style for the wishlist button */
+    .wishlist-button {
+      background-color: #ff3366;
+      left: 40%;
+    }
+
+    /* Style for the "Add to Cart" button */
+    .cart-button {
+      background-color: #00cc99;
+      left: 60%;
+    }
+
+        }
+    </style>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ... Your existing HTML code ... -->
+    <header>
+        <!-- ... Your existing header code ... -->
+        <div class="logo"><a href="#">SMK SHOPS</a></div>
+        <div class="menu">
+          <a href="#">
+            <ion-icon name="close" class="close"></ion-icon>
+          </a>
+          <ul>
+              <li><a href="#" class="under">HOME</a></li>
+              <li><a href="#" class="under">SHOP</a></li>
+              <li><a href="#" class="under">OUR PRODUCTS</a></li>
+              <li><a href="#" class="under">CONTACT US</a></li>
+              <li><a href="#" class="under">ABOUT US</a></li>
+            </ul>
+          </div>
+          <div class="search">
+      
+            <a href=""><input type="text" placeholder="search products" id="input">
+              <ion-icon class="s" name="search"></ion-icon>
+            </a>
+          </div>
+          <div class="heading">
+            <ul>
+              <li><a href="#home" class="under">HOME</a></li>
+              <li><a href="#section2" class="under">SHOP</a></li>
+              <li><a href="our1.html" class="under">OUR PRODUCTS</a></li>
+              <li><a href="#footer" class="under">CONTACT US</a></li>
+              <li><a href="about.html" class="under">ABOUT US</a></li>
+            </ul>
+          </div>
+          <div class="heading1">
+            <ion-icon name="menu" class="ham"></ion-icon>
+          </div>
+    </header>
+
+    <!-- Clothing Category -->
+    <section class="category">
+        Clothes
+    </section>
+    <div class="section2">
+        <div class="container">
+            <!-- Add 10 clothing items here -->
+            <!-- You can modify the details and images as needed -->
+            <!-- Example item -->
+            <div class="items">
+                <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP.pe-Sjx5Bu-_z62RULHFKgwHaJ4&pid=Api&P=0&h=180.jpg" alt=""></div>
+                <div class="name">T-Shirt</div>
+                <div class="price">₹500</div>
+                <div class="info">Made of pure cotton</div>
+                <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://tse4.mm.bing.net/th?id=OIP.x1CdKo04JM6UEaF60A1bUAHaJ4&pid=Api&P=0&h=180.jpg" alt=""></div>
+              <div class="name">Shirt</div>
+              <div class="price">₹600</div>
+              <div class="info">Made of pure cotton</div>
+              <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi1K9s30gkevrxMuw6iFtJszPi8aEaU_Mdcw&usqp=CAU" alt=""></div>
+            <div class="name">T-Shirt</div>
+            <div class="price">₹700</div>
+            <div class="info">Made of Rayon</div>
+            <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+        </div>
+        <div class="items">
+          <div class="img img1"><img src=" https://i5.walmartimages.com/asr/a837facf-5a84-4075-b5d2-08ec55247391.a2e62e105c2f4a21704ed04d59b42d6e.jpeg"alt=""></div>
+          <div class="name">Trouser</div>
+          <div class="price">₹900</div>
+          <div class="info">Made of pure cotton</div>
+          <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+      </div>
+      <div class="items">
+        <div class="img img1"><img src="https://s3-eu-west-1.amazonaws.com/images.linnlive.com/aa711f64754ed6292c07f021a9d99815/b0913876-49cf-4deb-a9f1-e58dc5057d64.jpg" alt=""></div>
+        <div class="name">Trouser</div>
+        <div class="price">₹1500</div>
+        <div class="info">Made of pure cotton</div>
+        <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+    </div>
+    <div class="items">
+      <div class="img img1"><img src="https://i5.walmartimages.com/asr/ce1daf7f-cdf3-4c15-9437-d9088372ba39.9a118361f9fa524d66975052eea39dfd.jpeg" alt=""></div>
+      <div class="name">Tops</div>
+      <div class="price">₹500</div>
+      <div class="info">Made of nylon</div>
+      <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+  </div>
+  <div class="items">
+    <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP._GEJZGDA5m41qDXHW5XKlAHaJv&pid=Api&P=0&h=180.jpg" alt=""></div>
+    <div class="name">Tops</div>
+    <div class="price">₹1500</div>
+    <div class="info">Made of Rayon</div>
+    <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPFp0QYyELQLs6CPets4aaWSWGbRIW0-ohA&usqp=CAU" alt=""></div>
+  <div class="name">T-Shirt</div>
+  <div class="price">₹700</div>
+  <div class="info">Made of pure cotton</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP.o0LFl_aAfB1rwE0-xbPMSAHaFb&pid=Api&P=0&h=180.jpg" alt=""></div>
+  <div class="name">Saree</div>
+  <div class="price">₹1500</div>
+  <div class="info">Made of Silk</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://tse4.mm.bing.net/th?id=OIP.fjGmKGYFY6wow5VR3W0cuAHaHa&pid=Api&P=0&h=180.jpg" alt=""></div>
+  <div class="name">Night pants</div>
+  <div class="price">₹1500</div>
+  <div class="info">Made of pure cotton</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+            <!-- Add more clothing items here -->
+        </div>
+    </div>
+
+    <!-- Groceries Category -->
+    <section class="category">
+        Groceries
+    </section>
+    <div class="section2">
+        <div class="container">
+            <!-- Add 10 grocery items here -->
+            <!-- You can modify the details and images as needed -->
+            <!-- Example item -->
+            <div class="items">
+                <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP.gnAGQMjEr6RZvtU3r0oIsAHaE8&pid=Api&P=0&h=180.jpg" alt=""></div>
+                <div class="name">Rice</div>
+                <div class="price">₹200</div>
+                <div class="info">Polished Rice</div>
+                <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=360/app/images/products/sliding_image/439931a.jpg?ts=1688471559" alt=""></div>
+              <div class="name">Almonds</div>
+              <div class="price">₹155</div>
+              <div class="info">200 grams</div>
+              <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://i5.walmartimages.com/asr/d231eaf6-f55a-4637-ab83-0d26ea6e4d53_1.eb25c071e3027fde11306af7806d54be.jpeg" alt=""></div>
+            <div class="name">chilli Powder</div>
+            <div class="price">₹298</div>
+            <div class="info">250 grams</div>
+            <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+        </div>
+        <div class="items">
+          <div class="img img1"><img src="https://tse3.mm.bing.net/th?id=OIP.l-cv2TpGfa3w0BLLNsZ9KQHaHa&pid=Api&P=0&h=180.jpg" alt=""></div>
+          <div class="name">Gram Masala</div>
+          <div class="price">₹154</div>
+          <div class="info">200 grams</div>
+          <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+      </div>
+      <div class="items">
+                <div class="img img1"><img src="https://tse4.mm.bing.net/th?id=OIP.8EUrg2kmv9034_Z7vtoMkAHaIt&pid=Api&P=0&h=180.jpg" alt=""></div>
+                <div class="name">Chana</div>
+                <div class="price">₹150</div>
+                <div class="info">2 Kg</div>
+                <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://www.bigbasket.com/media/uploads/p/l/40156319_11-tata-sampann-organic-moong-chilka.jpg?tr=w-640,q=80" alt=""></div>
+              <div class="name">Moong Chilka Dal</div>
+              <div class="price">₹144</div>
+              <div class="info">500 grams</div>
+              <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://tse4.mm.bing.net/th?id=OIP.g6oRBlbjA2jT11jnQsmgAQHaHa&pid=Api&P=0&h=180.jpg" alt=""></div>
+            <div class="name">Pepper</div>
+            <div class="price">₹600</div>
+            <div class="info">1 Kg</div>
+            <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+        </div>
+<div class="items">
+    <div class="img img1"><img src="https://m.media-amazon.com/images/I/61pVS9mSKyL._AC_UF1000,1000_QL80_.jpg" alt=""></div>
+    <div class="name">Turmeric powder</div>
+    <div class="price">₹100</div>
+    <div class="info">500 grams</div>
+    <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://www.bigbasket.com/media/uploads/p/m/40019397_11-bb-popular-sugar.jpg"alt=""></div>
+  <div class="name">Sugar</div>
+  <div class="price">₹50</div>
+  <div class="info">1 kg</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+            <!-- Add more grocery items here -->
+        </div>
+    </div>
+
+    <!-- Electronics Category -->
+    <section class="category">
+        Electronics
+    </section>
+    <div class="section2">
+        <div class="container">
+            <!-- Add 10 electronics items here -->
+            <!-- You can modify the details and images as needed -->
+            <!-- Example item -->
+            <div class="items">
+                <div class="img img1"><img src="https://m.media-amazon.com/images/I/41Xe96WtZoL._SX300_SY300_QL70_FMwebp_.jpg" alt=""></div>
+                <div class="name">OnePlus</div>
+                <div class="price">₹20,000</div>
+                <div class="info">6GB RAM and 128GB memory</div>
+                <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://boip.in/27065-large_default/apple-iphone-x-64gb-certified-refurbished-very-good.jpg" alt=""></div>
+              <div class="name">Apple iphone</div>
+              <div class="price">₹62,999</div>
+              <div class="info"> 6GB RAM and 128GB memory</div>
+              <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://img1.gadgetsnow.com/gd/images/products/additional/large/G442920_View_1/mobiles/smartphones/realme-narzo-n53-128-gb-feather-black-6-gb-ram-.jpg" alt=""></div>
+            <div class="name">Realme</div>
+            <div class="price">₹12,000</div>
+            <div class="info"> 6GB RAM and 128GB memory</div>
+            <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+        </div>
+        <div class="items">
+          <div class="img img1"><img src="https://m.media-amazon.com/images/I/615ekapl+pL._SX522_.jpg" alt=""></div>
+          <div class="name">Apple Airpods</div>
+          <div class="price">₹20,500</div>
+          <div class="info">3rd Generation</div>
+          <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+      </div>
+      <div class="items">
+      <div class="img img1"><img src="https://cdn1.smartprix.com/rx-iX2Aty7XS-w1200-h1200/X2Aty7XS.jpg"alt=""></div>
+      <div class="name">Bluetooth</div>
+      <div class="price">₹2000</div>
+      <div class="info">Noise Flair Bluetooth NeckBand</div>
+      <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+  </div>
+  <div class="items">
+    <div class="img img1"><img src="https://5.imimg.com/data5/SELLER/Default/2023/1/EP/UJ/XO/34568451/oppo-mobile-charger-500x500.jpg" alt=""></div>
+    <div class="name">Mobile Chargers</div>
+    <div class="price">₹1000</div>
+    <div class="info">5 W</div>
+    <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://i.gadgets360cdn.com/products/large/realme-smart-tv-32-db-800x450-1590390588.jpg?downsize=*:360" alt=""></div>
+  <div class="name">Realme smart TV</div>
+  <div class="price">₹25,000</div>
+  <div class="info">36 inches</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://m.media-amazon.com/images/I/312SthuvfYL._SY445_SX342_QL70_FMwebp_.jpg"alt=""></div>
+  <div class="name">Fridge</div>
+  <div class="price">₹26,000</div>
+  <div class="info">LG Brand Refrigerator with double door</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+            <!-- Add more electronics items here -->
+        </div>
+    </div>
+
+    <!-- Toys Category -->
+    <section class="category">
+        Toys
+    </section>
+    <div class="section2">
+        <div class="container">
+            <!-- Add 10 toy items here -->
+            <!-- You can modify the details and images as needed -->
+            <!-- Example item -->
+            <div class="items">
+                <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP.1i8rjCkRJN5G-K3RuDB3DwHaFc&pid=Api&P=0&h=180.jpg" alt=""></div>
+                <div class="name">plastic utensils</div>
+                <div class="price">₹300</div>
+                <div class="info">Collectible action figure toy</div>
+                <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+            </div>
+            <div class="items">
+              <div class="img img1"><img src="https://tse2.mm.bing.net/th?id=OIP.y8ju6GkAiGEJx9bg0eXhmQHaHa&pid=Api&P=0&h=180.jpg" alt=""></div>
+              <div class="name">Remote control Train</div>
+              <div class="price">₹300</div>
+              <div class="info">Collectible action figure toy</div>
+              <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+          </div>
+          <div class="items">
+            <div class="img img1"><img src="https://n4.sdlcdn.com/imgs/g/3/y/Talking-Tom-SDL248509336-2-94056.jpg" alt=""></div>
+            <div class="name">Talking Tom</div>
+            <div class="price">₹300</div>
+            <div class="info">Collectible action figure toy</div>
+            <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+        </div>
+        <div class="items">
+          <div class="img img1"><img src="https://i.ytimg.com/vi/kWn8Yidj96o/maxresdefault.jpg" alt=""></div>
+        <div class="name">Helicopter</div>
+        <div class="price">₹300</div>
+        <div class="info">Collectible action figure toy</div>
+        <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+    </div>
+    <div class="items">
+      <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR18i37UAbFXs1AoCa61417HZQpkdpB3Ww0Tw&usqp=CAU" alt=""></div>
+      <div class="name">Action Figure</div>
+      <div class="price">₹300</div>
+      <div class="info">Collectible action figure toy</div>
+      <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+  </div>
+  <div class="items">
+    <div class="img img1"><img src="https://tse1.mm.bing.net/th?id=OIP.8yHfOT3Q7ij7PxBRPOEXrAHaHa&pid=Api&P=0&h=180.jpg" alt=""></div>
+  <div class="name">Toy House</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="http://1.bp.blogspot.com/-r9_PTmSkM4s/Uqmb3yykP9I/AAAAAAAAANA/ZXx9-zYNNoQ/s1600/giant_red_teddy_bear_4__90826.1349394373.1280.1280.jpg" alt=""></div>
+  <div class="name">Teddy Bear</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZo57W9yuu5vuq4Yfgti4NBKzf9mo6DAZEQ&usqp=CAU" alt=""></div>
+  <div class="name">Action Figure</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0t0Oz1Aw9K2cszTVU-oauC1I3WR-2zhc5-Q&usqp=CAU" alt=""></div>
+  <div class="name">Action Figure</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn72Nmypan5qdmmrknCXb2_K6_NCqxtyd0mQ&usqp=CAU" alt=""></div>
+  <div class="name">Action Figure</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+<div class="items">
+  <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0EGOQbsE8TOFXWrhL1XLjOZMQIKovNUh1EQ&usqp=CAU" alt=""></div>
+  <div class="name">Action Figure</div>
+  <div class="price">₹300</div>
+  <div class="info">Collectible action figure toy</div>
+  <button class="button wishlist-button">Add to Wishlist</button>
+    <button class="button cart-button">Add to Cart</button>
+</div>
+            <!-- Add more toy items here -->
+        </div>
+    </div>
+
+    <!-- ... Your existing HTML code ... -->
+    <footer>
+      <div id="footer0" class="footer">
+        <h1>SMK SHOPS</h1>
+      </div>
+      <div class="footer1 ">
+        Connect with us at<div class="social-media">
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="product">
+          <div class="heading">Products</div>
+          <div class="div">Sell your Products</div>
+          <div class="div">Advertise</div>
+          <div class="div">Pricing</div>
+          <div class="div">Product Buisness</div>
+  
+        </div>
+        <div class="services">
+          <div class="heading">Services</div>
+          <div class="div">Return</div>
+          <div class="div">Cash Back</div>
+          <div class="div">Affiliate Marketing</div>
+          <div class="div">Others</div>
+        </div>
+        <div class="Company">
+          <div class="heading">Company</div>
+          <div class="div">Complaint</div>
+          <div class="div">Careers</div>
+          <div class="div">Affiliate Marketing</div>
+          <div class="div">Support</div>
+        </div>
+        <div class="Get Help">
+          <div class="heading">Get Help</div>
+          <div class="div">Help Center</div>
+          <div class="div">Privacy Policy</div>
+          <div class="div">Terms</div>
+          <div class="div">Login</div>
+        </div>
+      </div>
+      <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>const close = document.querySelector(".close");
+      const open = document.querySelector(".ham");
+      const menu = document.querySelector(".menu");
+      close.addEventListener("click", () => {
+        menu.style.visibility = "hidden";
+      });
+      open.addEventListener("click", () => {
+        menu.style.visibility = "visible";
+      });</script>
+       <script>
+        // JavaScript to show buttons when hovering over the image
+        const imageContainer = document.querySelector(".image-container");
+        const wishlistButton = document.querySelector(".wishlist-button");
+        const cartButton = document.querySelector(".cart-button");
+    
+        imageContainer.addEventListener("mouseover", () => {
+          wishlistButton.style.display = "block";
+          cartButton.style.display = "block";
+        });
+    
+        imageContainer.addEventListener("mouseout", () => {
+          wishlistButton.style.display = "none";
+          cartButton.style.display = "none";
+        });
+    
+        // JavaScript to handle button clicks (you can implement your own functionality here)
+        wishlistButton.addEventListener("click", () => {
+          // Implement your "Add to Wishlist" functionality
+          alert("Product added to the wishlist!");
+        });
+    
+        cartButton.addEventListener("click", () => {
+          // Implement your "Add to Cart" functionality
+          alert("Product added to the cart!");
+        });
+      </script>
+      
+
+</body>
+</html>
